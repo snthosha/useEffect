@@ -30,7 +30,8 @@ export function House() {
                         <th>Id</th>
                         <th>Title</th>
                         <th>Url</th>
-                        <th>ThumbnailUrl</th>
+                        {/* <th>ThumbnailUrl</th> */}
+                        <th>Image</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -41,8 +42,9 @@ export function House() {
                                     <td>{val.id}</td>
                                     <td>{val.title}</td>
                                     <td>{val.url}</td>
-                                    <td>{val.thumbnailUrl}</td>
 
+                                    {/* <td>{val.thumbnailUrl}</td> */}
+                                    <td> <img src={val.thumbnailUrl} alt="" /> </td>
                                 </tr>
                             )
                         })
