@@ -1,4 +1,12 @@
 table,th,td,tr{
+    width: auto;
     border: 2px solid black;
     color: rgb(17, 95, 80);
+}
+.img{
+    width: 250px;
+}
+body{
+    background-color: rgb(213, 218, 198);
+    color: black;
 }

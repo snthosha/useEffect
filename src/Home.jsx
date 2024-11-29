@@ -16,7 +16,7 @@ export function House() {
     const [arryData, setarryData] = useState([]);
 
     useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/photos')
+        fetch('https://fakestoreapiserver.reactbd.com/nextamazon')
             .then((response) => response.json())
             .then((res) => setarryData(res))
     }, [])
@@ -24,14 +24,16 @@ export function House() {
 
     return (
         <>
+        <h1>Amazon Products</h1>
             <table>
                 <thead>
                     <tr>
                         <th>Id</th>
                         <th>Title</th>
-                        <th>Url</th>
-                        {/* <th>ThumbnailUrl</th> */}
-                        <th>Image</th>
+                        <th>Price</th>
+                        <th>Discription</th>
+                        <th>Brand</th>
+                        <th >Image</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -39,12 +41,12 @@ export function House() {
                         arryData.map((val) => {
                             return (
                                 <tr>
-                                    <td>{val.id}</td>
+                                    <td>{val._id}</td>
                                     <td>{val.title}</td>
-                                    <td>{val.url}</td>
-
-                                    {/* <td>{val.thumbnailUrl}</td> */}
-                                    <td> <img src={val.thumbnailUrl} alt="" /> </td>
+                                    <td>{val.price}</td>
+                                    <td>{val.description}</td>
+                                    <td>{val.brand}</td>
+                                    <td> <img className='img' src={val.image} alt="" /> </td>
                                 </tr>
                             )
                         })
